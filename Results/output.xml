@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.8.3 on darwin)" generated="20211109 23:01:29.912" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="/Users/mola_tv/Documents/GitHub/kamal-kitabeli/Tests/Test.robot">
+<test id="s1-t1" name="User Checkout">
+<kw name="Open Kitabeli App" library="Common">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${HOST}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=True</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20211109 23:01:30.250" endtime="20211109 23:01:38.564"/>
+</kw>
+<status status="PASS" starttime="20211109 23:01:30.249" endtime="20211109 23:01:38.564"/>
+</kw>
+<kw name="Add To Cart Product" library="Home">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_home_makanan}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:01:38.564" endtime="20211109 23:01:44.260"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_home_makanan}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:01:44.264" level="INFO">Clicking element 'xpath=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.ImageView'.</msg>
+<status status="PASS" starttime="20211109 23:01:44.260" endtime="20211109 23:01:46.995"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>id=tv_skip</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=tv_skip</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211109 23:02:08.415" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211109 23:02:07.706" endtime="20211109 23:02:08.415"/>
+</kw>
+<msg timestamp="20211109 23:02:08.416" level="FAIL">Element locator 'id=tv_skip' did not match any elements after 20 seconds</msg>
+<status status="FAIL" starttime="20211109 23:01:46.996" endtime="20211109 23:02:08.416"/>
+</kw>
+<status status="PASS" starttime="20211109 23:01:46.996" endtime="20211109 23:02:08.416"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>id=tv_skip</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=tv_skip</arg>
+<doc>Click element identified by `locator`.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211109 23:02:09.294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211109 23:02:08.583" endtime="20211109 23:02:09.294"/>
+</kw>
+<msg timestamp="20211109 23:02:08.419" level="INFO">Clicking element 'id=tv_skip'.</msg>
+<msg timestamp="20211109 23:02:09.296" level="FAIL">ValueError: Element locator 'id=tv_skip' did not match any elements.</msg>
+<status status="FAIL" starttime="20211109 23:02:08.417" endtime="20211109 23:02:09.296"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:08.416" endtime="20211109 23:02:09.296"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${card_product_1}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:09.297" endtime="20211109 23:02:10.977"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${card_product_1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:10.981" level="INFO">Clicking element 'xpath=//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[2]/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[1]'.</msg>
+<status status="PASS" starttime="20211109 23:02:10.977" endtime="20211109 23:02:12.217"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_product_add_to_cart}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:12.217" endtime="20211109 23:02:12.309"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_product_add_to_cart}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:12.315" level="INFO">Clicking element 'id=bt_add_to_cart'.</msg>
+<status status="PASS" starttime="20211109 23:02:12.309" endtime="20211109 23:02:12.427"/>
+</kw>
+<status status="PASS" starttime="20211109 23:01:38.564" endtime="20211109 23:02:12.428"/>
+</kw>
+<kw name="Open Cart" library="Home">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_home_cart}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:12.429" endtime="20211109 23:02:14.270"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_home_cart}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:14.276" level="INFO">Clicking element 'id=ic_cart'.</msg>
+<status status="PASS" starttime="20211109 23:02:14.271" endtime="20211109 23:02:14.973"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:12.428" endtime="20211109 23:02:14.974"/>
+</kw>
+<kw name="Click Button Bayar" library="Cart">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_cart_bayar}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:14.975" endtime="20211109 23:02:15.691"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_cart_bayar}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:15.698" level="INFO">Clicking element 'id=bt_buy'.</msg>
+<status status="PASS" starttime="20211109 23:02:15.691" endtime="20211109 23:02:15.884"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:14.975" endtime="20211109 23:02:15.885"/>
+</kw>
+<kw name="Add Address" library="CheckoutPage">
+<arg>Kamal</arg>
+<arg>81297189756</arg>
+<arg>Perum Royal Platinum RT01/RW01</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_checkout_add_address}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:15.887" endtime="20211109 23:02:16.924"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_checkout_add_address}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:16.928" level="INFO">Clicking element 'id=tv_address'.</msg>
+<status status="PASS" starttime="20211109 23:02:16.924" endtime="20211109 23:02:17.082"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=ic_add</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:17.082" endtime="20211109 23:02:17.982"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=ic_add</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:17.986" level="INFO">Clicking element 'id=ic_add'.</msg>
+<status status="PASS" starttime="20211109 23:02:17.982" endtime="20211109 23:02:18.138"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${field_address_name}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:18.138" endtime="20211109 23:02:19.542"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${field_address_name}</arg>
+<arg>${NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:19.549" level="INFO">Typing text 'Kamal' into text field 'id=et_name'</msg>
+<status status="PASS" starttime="20211109 23:02:19.543" endtime="20211109 23:02:19.652"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${field_address_phonenumber}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:19.652" endtime="20211109 23:02:20.218"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${field_address_phonenumber}</arg>
+<arg>${PHONENUMBER}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:20.224" level="INFO">Typing text '81297189756' into text field 'id=et_number'</msg>
+<status status="PASS" starttime="20211109 23:02:20.218" endtime="20211109 23:02:20.316"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${field_address_address}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:20.317" endtime="20211109 23:02:24.370"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${field_address_address}</arg>
+<arg>${ADDRESS}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:24.375" level="INFO">Typing text 'Perum Royal Platinum RT01/RW01' into text field 'id=et_address'</msg>
+<status status="PASS" starttime="20211109 23:02:24.370" endtime="20211109 23:02:26.851"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_provinsi}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:26.856" level="INFO">Clicking element 'id=s_provinsi'.</msg>
+<status status="PASS" starttime="20211109 23:02:26.851" endtime="20211109 23:02:27.491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${dropdown_address_provinsi_selected}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:27.491" endtime="20211109 23:02:28.323"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_provinsi_selected}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:28.327" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='DKI Jakarta']'.</msg>
+<status status="PASS" starttime="20211109 23:02:28.324" endtime="20211109 23:02:29.209"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kota}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:29.214" level="INFO">Clicking element 'id=s_kota'.</msg>
+<status status="PASS" starttime="20211109 23:02:29.209" endtime="20211109 23:02:30.032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${dropdown_address_kota_selected}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:30.032" endtime="20211109 23:02:30.142"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kota_selected}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:30.146" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Jakarta Utara']'.</msg>
+<status status="PASS" starttime="20211109 23:02:30.142" endtime="20211109 23:02:30.968"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kecamatan}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:30.972" level="INFO">Clicking element 'id=s_kecamatan'.</msg>
+<status status="PASS" starttime="20211109 23:02:30.968" endtime="20211109 23:02:31.112"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${dropdown_address_kecamatan_selected}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:31.112" endtime="20211109 23:02:32.540"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kecamatan_selected}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:32.544" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Penjaringan']'.</msg>
+<status status="PASS" starttime="20211109 23:02:32.541" endtime="20211109 23:02:34.444"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kelurahan}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:34.450" level="INFO">Clicking element 'id=s_kelurahan'.</msg>
+<status status="PASS" starttime="20211109 23:02:34.444" endtime="20211109 23:02:34.602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${dropdown_address_kelurahan_selected}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:34.603" endtime="20211109 23:02:36.513"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${dropdown_address_kelurahan_selected}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:36.517" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Kamal Muara']'.</msg>
+<status status="PASS" starttime="20211109 23:02:36.513" endtime="20211109 23:02:38.934"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_address_simpan}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:38.939" level="INFO">Clicking element 'id=bt_simpan'.</msg>
+<status status="PASS" starttime="20211109 23:02:38.934" endtime="20211109 23:02:39.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211109 23:02:42.029" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211109 23:02:39.026" endtime="20211109 23:02:42.029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Navigate up"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:42.029" endtime="20211109 23:02:42.382"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageButton[@content-desc="Navigate up"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:42.385" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Navigate up"]'.</msg>
+<status status="PASS" starttime="20211109 23:02:42.383" endtime="20211109 23:02:42.871"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:15.885" endtime="20211109 23:02:42.871"/>
+</kw>
+<kw name="Click Button Buat Pesanan" library="CheckoutPage">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${button_checkout_buat_pesanan}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:42.872" endtime="20211109 23:02:43.852"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${button_checkout_buat_pesanan}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211109 23:02:43.856" level="INFO">Clicking element 'id=bt_buy'.</msg>
+<status status="PASS" starttime="20211109 23:02:43.852" endtime="20211109 23:02:44.910"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:42.872" endtime="20211109 23:02:44.911"/>
+</kw>
+<kw name="Verify Payment Success" library="SuccessPage">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${text_success_pembayaran_berhasil}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20211109 23:02:44.912" endtime="20211109 23:02:45.997"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>${text_success_pembayaran_berhasil}</arg>
+<arg>Pembayaran Berhasil!</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20211109 23:02:46.001" level="INFO">Verifying element 'id=textView16' contains text 'Pembayaran Berhasil!'.</msg>
+<status status="PASS" starttime="20211109 23:02:45.998" endtime="20211109 23:02:46.073"/>
+</kw>
+<status status="PASS" starttime="20211109 23:02:44.911" endtime="20211109 23:02:46.074"/>
+</kw>
+<doc>UI Verification from the search page</doc>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<timeout value="4 minutes"/>
+<status status="PASS" starttime="20211109 23:01:30.248" endtime="20211109 23:02:46.075"/>
+</test>
+<status status="PASS" starttime="20211109 23:01:29.915" endtime="20211109 23:02:46.076"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
